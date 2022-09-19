@@ -1,0 +1,31 @@
+ALGORITHM read_sentence
+var
+  sentence : CHAR ;
+  count1 : INTEGER:=0; //length of the sentence
+  count2 : INTEGER:=0; //number of words in the sentence
+  count3 : INTEGER:=0; //number of vowels in the sentence
+ 
+
+BEGIN
+  Read(sentence)
+  WHILE (sentence <> '.') DO
+    IF (sentence in ['a','e','o','u','i,','A','O','E','U','I']) THEN
+    count1++
+    count3++
+
+    ELSE_IF (sentence = ' ') THEN
+      count1++
+      count2++
+
+    ELSE
+      count1++
+
+    END_IF
+  END_WHILE
+
+  Write(count1)
+  Write(count2)
+  Write(count3)
+END 
+
+
